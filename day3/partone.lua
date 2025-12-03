@@ -26,7 +26,7 @@ while input ~= nil do
 
     local found = {}
     local start = 1
-    local max = 12
+    local max = 2
     for i=1,max do
         local trim = max-i
         start, found[#found+1] = searchHighJolt(start,trim,joltages)

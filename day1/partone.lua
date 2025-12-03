@@ -1,5 +1,5 @@
 local file = io.open('input', "r");
-local input = file:read("a")
+local input = file:read("l")
 local dial = 50
 local pass = 0
 

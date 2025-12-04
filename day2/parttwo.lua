@@ -48,7 +48,7 @@ for i, v in ipairs(ranges) do
             end
             --print("CONFERINDO: ",check, s)
             if check == s then
-                print("Passou: ",curr)
+                --print("Passou: ",curr)
                 pass = pass + curr
                 break
             end

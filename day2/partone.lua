@@ -1,5 +1,5 @@
 local file = io.open('ids')
-local input = file:read("l")
+local input = file:read("a")
 local pass = 0
 -- define a function to spring a string with give separator
 function split(inputstr, sep)

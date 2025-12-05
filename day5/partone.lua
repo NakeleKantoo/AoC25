@@ -14,7 +14,7 @@ function split(inputstr, sep)
     return t
 end
 
-local file = io.open('example', "r")
+local file = io.open('input', "r")
 local input = file:read("l")
 -- local lines = split(input,"\n")
 

@@ -23,7 +23,7 @@ local map = {}
 
 local w, h = #lines[1], #lines
 
-local beam = {} -- guardar a pos do raio
+local beam = {}              -- guardar a pos do raio
 
 local alternateRealities = 0 -- guardar quantas vezes se partiu
 
@@ -75,21 +75,21 @@ while #decisions > 0 do
                 x = beam.x,
                 y = beam.y
             }
-            beam.x = math.max(1,beam.x - 1)
+            beam.x = math.max(1, beam.x - 1)
         end
     end
 
     --chegou no fim, marque como uma das realidades
     alternateRealities = alternateRealities + 1
     local decision = nil
-    while decision == nil do    
+    while decision == nil do
         --agora volte pra decisão mais recente
         decision = decisions[#decisions]
-    
+
         --se a decisão ja foi percorrida, elimine-a
         if decision then
-            if decision.went then 
-                table.remove(decisions,#decisions)
+            if decision.went then
+                table.remove(decisions, #decisions)
                 decision = nil
             end
         else
@@ -101,7 +101,7 @@ while #decisions > 0 do
         --marque a decisão como percorrida pra esquerda
         decision.went = true
         --volte o beam pra ela
-        beam.x = decision.x+1 --para direita
+        beam.x = decision.x + 1 --para direita
         beam.y = decision.y
         --loop
     end
@@ -119,4 +119,3 @@ for y = 1, h do
 end
 
 print("Split count: " .. alternateRealities)
-
